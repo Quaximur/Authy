@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Options;
 using System.Security.Claims;
 
-namespace Authy.Application.Auth;
+namespace Authy.Application.Jwt;
 
 public class JwtProvider(IOptions<JwtOptions> jwtoptions) : IJwtProvider
 {

@@ -4,4 +4,5 @@
   </Folder>
   <Project Path="Authy.API/Authy.API.csproj" />
   <Project Path="Authy.Application/Authy.Application.csproj" />
+  <Project Path="Authy.Contracts/Authy.Contracts.csproj" />
 </Solution>

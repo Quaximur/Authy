@@ -1,4 +1,4 @@
-using Authy.Application.Auth;
+using Authy.Application.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
