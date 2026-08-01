@@ -1,3 +1,5 @@
+using Authy.Application.Auth;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
@@ -7,6 +9,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapGet("/dev/token/{userId}", (IJwtProvider jwtProvider, Guid userId) =>
+    {
+        return jwtProvider.GenerateToken(userId);
+    });
 }
 
 app.UseHttpsRedirection();
