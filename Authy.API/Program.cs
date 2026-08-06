@@ -1,10 +1,21 @@
 using Authy.Application.Jwt;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Listen(IPAddress.Any, 7567, listenOptions =>
+    {
+        listenOptions.Protocols = HttpProtocols.Http2;
+    });
+});
 
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
 
 if (app.Environment.IsDevelopment())
 {
