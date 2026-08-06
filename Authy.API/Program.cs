@@ -1,7 +1,9 @@
+using Authy.API;
+using Authy.Application;
 using Authy.Application.Jwt;
+using Authy.Data;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using System.Net;
-using Authy.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +18,10 @@ builder.WebHost.ConfigureKestrel(options =>
 builder.AddDataServices();
 
 builder.Services.AddOpenApi();
+builder.Services.AddMagicOnion();
+builder.Services.AddApiAuth();
 
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -30,6 +33,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapMagicOnionService<AuthService>();
 
 app.MapGet(string.Empty, () => "Let me identify you... Wait. Who are you?");
 
