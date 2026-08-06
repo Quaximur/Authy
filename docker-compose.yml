@@ -1,0 +1,22 @@
+services:
+    postgres:
+        container_name: postgres
+        image: postgres:17
+        environment: 
+            POSTGRES_DB: "${POSTGRES_DB:-authy_dev_db}"
+            POSTGRES_USER: "${POSTGRES_USER:-postgres}"
+            POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-so_strong_PASSWORD111}"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        ports:
+            - "${POSTGRES_PORT:-5432}:5432"
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U postgres"]
+            interval: 30s
+            timeout: 5s
+            retries: 5
+
+        
+volumes:
+    postgres_data:
