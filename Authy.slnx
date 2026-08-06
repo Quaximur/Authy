@@ -1,8 +1,11 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path=".env" />
     <File Path=".gitignore" />
   </Folder>
   <Project Path="Authy.API/Authy.API.csproj" />
   <Project Path="Authy.Application/Authy.Application.csproj" />
   <Project Path="Authy.Contracts/Authy.Contracts.csproj" />
+  <Project Path="Authy.Data/Authy.Data.csproj" Id="7f3288e8-5740-4de6-bf58-f2201a8b7780" />
+  <Project Path="Authy.Domain/Authy.Domain.csproj" Id="35288aac-9c93-4343-884b-b5a6e4bd4db2" />
 </Solution>
