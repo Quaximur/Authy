@@ -11,7 +11,7 @@ public static class DI
     {
         var dbContextConnectionString =
            Environment.GetEnvironmentVariable("ConnectionStrings__AuthyDbContext_Postgres")
-           ?? builder.Configuration.GetConnectionString("AucyDbContext");
+           ?? builder.Configuration.GetConnectionString("AuthyDbContext");
 
         builder.Services.AddDbContext<AuthyDbContext>(options =>
         {

@@ -3,9 +3,12 @@ using Authy.Application;
 using Authy.Application.Jwt;
 using Authy.Data;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
+
+DotNetEnv.Env.TraversePath().Load();
 
 builder.WebHost.ConfigureKestrel(options =>
 {
@@ -25,6 +28,14 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    using IServiceScope startupScope = app.Services.CreateScope();
+    using AuthyDbContext ctx = startupScope.ServiceProvider.GetRequiredService<AuthyDbContext>();
+
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
+
+    ctx.Database.Migrate();
+
     app.MapOpenApi();
     app.MapGet("/dev/token/{userId}", (IJwtProvider jwtProvider, Guid userId) =>
     {
