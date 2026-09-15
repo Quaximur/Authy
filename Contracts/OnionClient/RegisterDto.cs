@@ -1,5 +1,4 @@
-﻿// Contracts/OnionClient/RegisterDto.cs
-using MessagePack;
+﻿using MessagePack;
 
 namespace Authy.Contracts.OnionClient
 {
