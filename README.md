@@ -8,15 +8,15 @@ Built as an authentication stub for [Aucy](https://github.com/Quaximur/Aucy) and
 
 ## 🛠️ Tech Stack
 
-[![.NET](https://img.shields.io/badge/10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/dotnet/runtime)
-[![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/dotnet/aspnetcore)
-[![MagicOnion](https://img.shields.io/badge/MagicOnion-512BD4?style=for-the-badge)](https://github.com/Cysharp/MagicOnion)
-[![gRPC](https://img.shields.io/badge/gRPC-244C5A?style=for-the-badge&logo=google&logoColor=white)](https://github.com/grpc/grpc-dotnet)
-[![MessagePack](https://img.shields.io/badge/MessagePack-000000?style=for-the-badge)](https://github.com/MessagePack-CSharp/MessagePack-CSharp)
+[![.NET](https://img.shields.io/badge/.NET_10-512BD4?style=plastic&logo=dotnet&logoColor=white)](https://github.com/dotnet/runtime)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=plastic&logo=dotnet&logoColor=white)](https://github.com/dotnet/aspnetcore)
+[![MagicOnion](https://img.shields.io/badge/MagicOnion-6F42C1?style=plastic&logo=github)](https://github.com/Cysharp/MagicOnion)
+[![gRPC](https://img.shields.io/badge/gRPC-2DA6B0?style=plastic&logo=google&logoColor=white)](https://github.com/grpc/grpc-dotnet)
+[![MessagePack](https://img.shields.io/badge/MessagePack-111111?style=plastic&logo=github)](https://github.com/MessagePack-CSharp/MessagePack-CSharp)
 
-[![Entity Framework Core](https://img.shields.io/badge/EF_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/dotnet/efcore)
-[![Npgsql](https://img.shields.io/badge/Npgsql-EF_Core-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://github.com/npgsql/efcore.pg)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://github.com/postgres/postgres)
+[![EF Core](https://img.shields.io/badge/EF_Core-512BD4?style=plastic&logo=dotnet&logoColor=white)](https://github.com/dotnet/efcore)
+[![Npgsql](https://img.shields.io/badge/Npgsql-336791?style=plastic&logo=postgresql&logoColor=white)](https://github.com/npgsql/efcore.pg)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=plastic&logo=postgresql&logoColor=white)](https://github.com/postgres/postgres)
 
 ## ⚡ What's Inside
 
